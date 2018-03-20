@@ -1,5 +1,49 @@
 $color: blue;
-#myTest {
-    background-color: $color; 
-    color: #fff;
+
+
+
+.container {
+    display: flex;
+    
+    // flex-direction: row | row-reverse | column | column-reverse;
+    //flex-direction: row;
+
+    //flex-wrap: nowrap | wrap | wrap-reverse;
+    flex-wrap: nowrap;
+    
+    //flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+    //flex-flow: row wrap;
+    
+    //justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+    //justify-content: flex-start;
+
+    //align-items: flex-start | flex-end | center | baseline | stretch;
+    //align-items: flex-start;
+
+    //align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+    //align-content: flex-start;
+
+    height: 300px;
+    background-color: $color;
+    & > div {
+        &:nth-child(1) {
+            background-color: green;
+        }
+        &:nth-child(2) {
+            flex-grow: 3;
+            flex-shrink: 3;
+            flex-basis: 150px;
+
+            //flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+            flex: 1 2 200px;
+
+            //align-self: auto | flex-start | flex-end | center | baseline | stretch;
+            align-self: center;
+            background-color: yellow;
+        }
+        
+        width: 300px;
+        margin: 10px;
+        background-color: #fff;
+    }
 }
