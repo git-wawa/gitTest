@@ -23,4 +23,14 @@
   align-self: center;
   background-color: yellow;
 }
+
+.container > div.btn {
+  color: #fff;
+}
+
+.container > div.btn.btn-gray {
+  width: 100px;
+  background-color: #ddd;
+  background-image: url(a.gif) no-repeat;
+}
 /*# sourceMappingURL=example.css.map */

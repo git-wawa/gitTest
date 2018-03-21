@@ -1,7 +1,5 @@
 $color: blue;
 
-
-
 .container {
     display: flex;
     
@@ -45,5 +43,13 @@ $color: blue;
         width: 300px;
         margin: 10px;
         background-color: #fff;
+        &.btn {
+            color: #fff;
+            &.btn-gray {
+                width: 100px;
+                background-color: #ddd;
+                background-image: url(a.gif) no-repeat;
+            }
+        }
     }
 }
