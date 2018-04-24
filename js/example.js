@@ -1,12 +1,3 @@
-var ls = {
-    x: null,
-    init: function () {
-        //init(){
-        x = document.getElementById('myTest');
-        //console.log(x.innerHTML);
-    }
-}
-window.onload = ls.init;
 
 
 // DOMContentLoaded은 HTML과 script가 로드된 시점에 발생하는 이벤트로 load 이벤트보다 먼저 발생한다. (IE 9 이상 지원)
@@ -30,17 +21,4 @@ window.onload = ls.init;
 
 //내부함수 child는 자신을 포함하고 있는 부모함수 parent의 변수에 접근할 수 있다. 하지만 부모함수는 자식함수(내부함수)의 변수에 접근할 수 없다.
 //또한 내부함수는 부모함수의 외부에서 접근할 수 없다.
-
-// var str = 'test';
-// console.log(typeof str);                 // string
-// console.log(str.constructor === String); // true
-// console.dir(str);
-
-var strObj = new String('test');
-console.log(typeof strObj);                 // object
-console.log(strObj.constructor === String); // true
-console.dir(strObj);
-
-console.log(str.toUpperCase());    // TEST
-console.log(strObj.toUpperCase()); // TEST
 

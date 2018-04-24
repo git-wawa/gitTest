@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/example.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/example.min.css">
+</head>
+
+<body>
+
+
+    <div id="example-2">
+        <!-- `greet`는 메소드 이름으로 아래에 정의되어 있습니다 -->
+        <button @click="greet($event)">Greet</button>
+    </div>
+
+    <hr>
+
+    <div id="app-model">
+        <input type="radio" id="checkbox" value="아아아" v-model="aaa">
+        <label for="checkbox">{{ aaa }}</label>
+    </div>
+
+    <hr>
+
+    <div id="example1">
+        <my-component></my-component>
+    </div>
+    <div id="example2">
+        <my-component2></my-component2>
+    </div>
+
+    <hr>
+
+    <div id="example-3">
+        <simple-counter></simple-counter>
+        <simple-counter></simple-counter>
+        <simple-counter></simple-counter>
+    </div>
+
+    <hr>
+
+    <div id="props-example-1">
+        <!-- jascript는 camelCase, html은 kebab-case -->
+        <child my-msg-props="안녕하세요."></child>
+    </div>
+
+    <hr>
+
+    <div id="props-example-2">
+        <input type="text" v-model="parentMsg">
+        <child v-bind:my-msg-props="parentMsg"></child>
+    </div>
+
+    <hr>
+
+    <style>
+        .wawa-enter-active, .wawa-leave-active {
+            transition: opacity .5s;
+        }
+        .wawa-enter, .wawa-leave-to  {
+        /* .wawa-leave-active below version 2.1.8 */
+            opacity: 0;
+        }
+    </style>
+    <div id="demo">
+        <button @click="show = !show">
+            Toggle
+        </button>
+        <transition name="wawa">
+            <p v-if="show">hello</p>
+        </transition>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/vue-instance.js"></script>
+    <!-- <script src="./js/example.js"></script> -->
+</body>
+
+</html>

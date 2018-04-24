@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/example.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/example.min.css">
+</head>
+
+<body>
+
+    <div id="ex1">
+        <input type="text" v-focus>
+    </div>
+
+    <div id="ex2">
+        <blog-post>
+            <h1 slot="header">
+                About Me
+            </h1>
+
+            <p>Here's some page content, which will be included in vm.$slots.default, because it's not inside a named slot.</p>
+
+            <p slot="footer">
+                Copyright 2016 Evan You
+            </p>
+
+            <p>If I have some content down here, it will also be included in vm.$slots.default.</p>.
+        </blog-post>
+    </div>
+
+    <div id="example_1">
+        <input type="text" v-bind:id="message | capitalize">
+        <p>{{ message }}</p>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/vue-mixin.js"></script>
+</body>
+
+</html>
